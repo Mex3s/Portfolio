@@ -1,44 +1,29 @@
-# Portfolio
+# Mex3s Portfolio
 
-Welcome to my personal portfolio website!  
-This repository contains the source code and assets for my portfolio, showcasing my projects, skills, and contact information.
+Welcome to my personal portfolio repository!  
+This is the source code behind my live portfolio website, where I showcase my skills, projects, and ways to get in touch with me.
 
-## About
+## About Me
 
-This portfolio is built using HTML, CSS, and JavaScript and hosted on GitHub Pages for easy access and sharing.  
-It features sections like:
+I am a passionate developer/designer (you can add your role here) who loves building clean, responsive websites and web apps. This portfolio highlights some of my best work and provides information about me.
 
-- About Me
-- Projects
-- Contact Form
-- Resume and downloadable resources
+## Live Website
 
-## Live Demo
-
-Check out the live site here:  
+Check out my live portfolio here:  
 [https://mex3s.github.io/Portfolio/](https://mex3s.github.io/Portfolio/)
 
-## Structure
+## Repository Structure
 
-- `index.html` — The main landing page  
-- `contact.html` — Contact form page  
-- `assets/` — Folder containing images, PDFs, and other files  
-- CSS and JS files for styling and interactivity
+- `index.html` — Homepage of my portfolio  
+- `contact.html` — Contact page to get in touch  
+- Other folders contain images, PDFs (like my resume), and assets used in the site  
+- CSS and JavaScript files for styling and functionality
 
-## How to Use
+## How to View or Customize
 
-Feel free to fork this repo and customize it for your own portfolio.  
-To deploy your own version on GitHub Pages:
+You can view this site live via GitHub Pages.  
+To customize or run it locally:
 
-1. Rename the repo if desired (for personal sites use `yourusername.github.io`)  
-2. Push your code to the `main` branch  
-3. Enable GitHub Pages in the repository settings, choosing the `main` branch and root folder  
-4. Your site will be live at `https://yourusername.github.io/repo-name/`
-
-## License
-
-This project is open source and free to use under the MIT License.
-
----
-
-Thanks for visiting! Feel free to reach out if you want to connect.
+1. Clone this repo:  
+   ```bash
+   git clone https://github.com/Mex3s/Portfolio.git
