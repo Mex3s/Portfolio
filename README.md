@@ -1,82 +1,44 @@
-# HTML
+# Portfolio
 
-A modern HTML project utilizing Tailwind CSS for building responsive web applications with minimal setup.
+Welcome to my personal portfolio website!  
+This repository contains the source code and assets for my portfolio, showcasing my projects, skills, and contact information.
 
-## 🚀 Features
+## About
 
-- **HTML5** - Modern HTML structure with best practices
-- **Tailwind CSS** - Utility-first CSS framework for rapid UI development
-- **Custom Components** - Pre-built component classes for buttons and containers
-- **NPM Scripts** - Easy-to-use commands for development and building
-- **Responsive Design** - Mobile-first approach for all screen sizes
+This portfolio is built using HTML, CSS, and JavaScript and hosted on GitHub Pages for easy access and sharing.  
+It features sections like:
 
-## 📋 Prerequisites
+- About Me
+- Projects
+- Contact Form
+- Resume and downloadable resources
 
-- Node.js (v12.x or higher)
-- npm or yarn
+## Live Demo
 
-## 🛠️ Installation
+Check out the live site here:  
+[https://mex3s.github.io/Portfolio/](https://mex3s.github.io/Portfolio/)
 
-1. Install dependencies:
-```bash
-npm install
-# or
-yarn install
-```
+## Structure
 
-2. Start the development server:
-```bash
-npm run dev
-# or
-yarn dev
-```
+- `index.html` — The main landing page  
+- `contact.html` — Contact form page  
+- `assets/` — Folder containing images, PDFs, and other files  
+- CSS and JS files for styling and interactivity
 
-## 📁 Project Structure
+## How to Use
 
-```
-html_app/
-├── css/
-│   ├── tailwind.css   # Tailwind source file with custom utilities
-│   └── main.css       # Compiled CSS (generated)
-├── pages/             # HTML pages
-├── index.html         # Main entry point
-├── package.json       # Project dependencies and scripts
-└── tailwind.config.js # Tailwind CSS configuration
-```
+Feel free to fork this repo and customize it for your own portfolio.  
+To deploy your own version on GitHub Pages:
 
-## 🎨 Styling
+1. Rename the repo if desired (for personal sites use `yourusername.github.io`)  
+2. Push your code to the `main` branch  
+3. Enable GitHub Pages in the repository settings, choosing the `main` branch and root folder  
+4. Your site will be live at `https://yourusername.github.io/repo-name/`
 
-This project uses Tailwind CSS for styling. Custom utility classes include:
+## License
 
+This project is open source and free to use under the MIT License.
 
-## 🧩 Customization
+---
 
-To customize the Tailwind configuration, edit the `tailwind.config.js` file:
-
-
-## 📦 Build for Production
-
-Build the CSS for production:
-
-```bash
-npm run build:css
-# or
-yarn build:css
-```
-
-## 📱 Responsive Design
-
-The app is built with responsive design using Tailwind CSS breakpoints:
-
-- `sm`: 640px and up
-- `md`: 768px and up
-- `lg`: 1024px and up
-- `xl`: 1280px and up
-- `2xl`: 1536px and up
-
-## 🙏 Acknowledgments
-
-- Built with [Rocket.new](https://rocket.new)
-- Powered by HTML and Tailwind CSS
-
-Built with ❤️ on Rocket.new
+Thanks for visiting! Feel free to reach out if you want to connect.
