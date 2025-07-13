@@ -4,10 +4,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact</title>
+    <title>Contact - Professional Gateway | CodeCraft Portfolio</title>
     <meta name="description"
         content="Connect with a professional developer specializing in semantic web excellence and performance optimization. Schedule technical consultations, request project quotes, or download resources." />
     <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Contact CodeCraft Portfolio - Professional Developer Gateway" />
+    <meta property="og:description"
+        content="Schedule technical consultations and connect with a developer who delivers semantic web excellence and performance optimization mastery." />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    <meta property="og:url" content="https://codecraft-portfolio.com/contact" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact CodeCraft Portfolio - Professional Gateway" />
+    <meta name="twitter:description"
+        content="Connect with a developer who delivers technical excellence and measurable results" />
+    <meta name="twitter:image"
+        content="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -52,7 +70,7 @@
 
                 <!-- Desktop Navigation -->
                 <ul class="hidden md:flex items-center space-x-8" role="menubar">
-                    <li role="none"><a href="https://mex3s.github.io/Portfolio"
+                    <li role="none"><a href="/"
                             class="text-text-secondary hover:text-primary transition-smooth" role="menuitem">Accueil</a>
                     </li>
                     <!--<li role="none"><a href="projects_portfolio_showcase.html"
@@ -76,7 +94,7 @@
             <div class="md:hidden mt-4 pb-4 border-t border-border hidden" id="mobile-menu">
                 <ul class="space-y-2 pt-4" role="menu">
                     <li>
-                        <a href="https://mex3s.github.io/Portfolio" class="block py-2 text-text-secondary hover:text-primary transition-smooth"
+                        <a href="/" class="block py-2 text-text-secondary hover:text-primary transition-smooth"
                             role="menuitem">Accueil</a>
                     </li>
                     <li><a href="#" class="block py-2 text-primary font-semibold" role="menuitem"
@@ -186,7 +204,7 @@
                                 class="card space-y-6" id="contact-form">
                                 <input type="hidden" name="_captcha" value="false">
                                 <input type="hidden" name="_template" value="table">
-                                <input type="hidden" name="_next" value="https://mex3s.github.io/Portfolio/ty.html">
+                                <input type="hidden" name="_next" value="http://127.0.0.1:5501/contact.html">
                                 <div>
                                     <label for="project-type" class="block text-sm font-semibold text-primary mb-2">
                                         Type de projet <span class="text-error">*</span>
@@ -306,9 +324,9 @@
                                         </div>
                                         <div>
                                             <div class="font-medium text-primary">Email</div>
-                                            <a href="mailto:ousshri28@gmail.com"
+                                            <a href="mailto:oussamahrioued@gmail.com"
                                                 class="text-accent hover:text-accent-600">
-                                                ousshri28@gmail.com
+                                                oussamahrioued-@gmail.com
                                             </a>
                                         </div>
                                     </div>
@@ -420,7 +438,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Liens Rapides</h3>
                     <ul class="space-y-2">
-                        <li><a href="https://mex3s.github.io/Portfolio"
+                        <li><a href="/"
                                 class="text-secondary-300 hover:text-accent transition-smooth">Accueil</a></li>
                         <li><a href="contact.html"
                                 class="text-secondary-300 hover:text-accent transition-smooth">Contact</a></li>
@@ -452,6 +470,22 @@
     </footer>
     <!-- JavaScript for Interactive Elements -->
     <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
         document.querySelector('form').addEventListener('submit', function (e) {
             e.preventDefault();
 
