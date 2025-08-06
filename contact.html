@@ -22,13 +22,14 @@
             <div class="flex items-center justify-between">
                 <!-- Logo -->
                 <div class="flex items-center space-x-2">
-                   <a href="/"> <span class="text-xl font-bold text-gradient">Oussama</span></a>
+
+                    <span class="text-xl font-bold text-gradient">Oussama</span>
                 </div>
 
                 <!-- Desktop Navigation -->
                 <ul class="hidden md:flex items-center space-x-8" role="menubar">
-                    <li role="none"><a href="/"
-                            class="text-text-secondary hover:text-primary transition-smooth" role="menuitem">Accueil</a>
+                    <li role="none"><a href="/" class="text-text-secondary hover:text-primary transition-smooth"
+                            role="menuitem">Accueil</a>
                     </li>
                     <!--<li role="none"><a href="projects_portfolio_showcase.html"
                             class="text-text-secondary hover:text-primary transition-smooth"
@@ -49,13 +50,12 @@
 
             <!-- Mobile Navigation -->
             <div class="md:hidden mt-4 pb-4 border-t border-border hidden" id="mobile-menu">
-                <ul class="space-y-2 pt-4" >
+                <ul class="space-y-2 pt-4">
                     <li>
-                        <a href="/" class="block py-2 text-text-secondary hover:text-primary transition-smooth"
-                           >Accueil</a>
+                        <a href="/"
+                            class="block py-2 text-text-secondary hover:text-primary transition-smooth">Accueil</a>
                     </li>
-                    <li><a href="#" class="block py-2 text-primary font-semibold" 
-                            aria-current="page">Contact</a></li>
+                    <li><a href="#" class="block py-2 text-primary font-semibold" aria-current="page">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -220,13 +220,14 @@
                                         placeholder="Décrivez vos objectifs, défis techniques et exigences spécifiques…"
                                         aria-describedby="description-help description-error"></textarea>
                                     <p id="description-help" class="text-sm text-text-secondary mt-1">
-                                        Incluez des détails sur les problèmes de performance actuels, les exigences en matière d'accessibilité ou les contraintes techniques.
+                                        Incluez des détails sur les problèmes de performance actuels, les exigences en
+                                        matière d'accessibilité ou les contraintes techniques.
                                     </p>
                                 </div>
 
                                 <!-- Timeline and Budget -->
                                 <div class="grid md:grid-cols-2 gap-6">
-                                    <div>
+                                    <div id="timeline-wrapper">
                                         <label for="timeline" class="block text-sm font-semibold text-primary mb-2">
                                             Project Timeline
                                         </label>
@@ -235,9 +236,27 @@
                                             <option value="urgent">Urgent (1-2 weeks)</option>
                                             <option value="standard">Standard (3-6 weeks)</option>
                                             <option value="flexible">Flexible (6+ weeks)</option>
-                                            <option value="ongoing">Ongoing Partnership</option>
+                                            <option value="other">other</option>
                                         </select>
                                     </div>
+                                    <script>
+                                            const timelineWrapper = document.getElementById('timeline-wrapper');
+                                            const timelineSelect = document.getElementById('timeline');
+
+                                            timelineSelect.addEventListener('change', function () {
+                                                if (this.value === 'other') {
+                                                    // Create new input element
+                                                    const input = document.createElement('input');
+                                                    input.type = 'text';
+                                                    input.name = 'timeline';
+                                                    input.placeholder = 'Others...';
+                                                    input.className = 'input-field';
+
+                                                    // Replace select with input
+                                                    timelineWrapper.replaceChild(input, timelineSelect);
+                                                }
+                                            });
+                                        </script>
                                     <div>
                                         <label for="budget" class="block text-sm font-semibold text-primary mb-2">
                                             Budget
@@ -281,10 +300,52 @@
                                         </div>
                                         <div>
                                             <div class="font-medium text-primary">Email</div>
-                                            <a href="mailto:oussamahrioued@gmail.com"
-                                                class="text-accent hover:text-accent-600">
-                                                oussamahrioued-@gmail.com
+                                            <a href="mailto:ousshri28@gmail.com"
+                                                class="text-accent hover:text-accent-600" id="emailLink">
+                                                ousshri28@gmail.com
                                             </a>
+                                            <div id="copyPopup" style="
+                                                    position: fixed;
+                                                    bottom: 20px;
+                                                    left: 50%;
+                                                    transform: translateX(-50%);
+                                                    background: #4caf50;
+                                                    color: white;
+                                                    padding: 10px 20px;
+                                                    border-radius: 8px;
+                                                    opacity: 0;
+                                                    pointer-events: none;
+                                                    font-weight: bold;
+                                                    font-family: Arial, sans-serif;
+                                                    box-shadow: 0 0 10px rgba(76,175,80,0.7);
+                                                    transition: opacity 0.4s ease;
+                                                    z-index: 9999;
+                                                ">
+                                                Copied!
+                                            </div>
+
+
+                                            <script>
+                                                const emailLink = document.getElementById('emailLink');
+                                                const popup = document.getElementById('copyPopup');
+
+                                                emailLink.addEventListener('click', function (event) {
+                                                    const email = 'ousshri28@gmail.com';
+
+                                                    navigator.clipboard.writeText(email).then(() => {
+                                                        popup.style.opacity = '1';
+                                                        popup.style.pointerEvents = 'auto';
+                                                        setTimeout(() => {
+                                                            popup.style.opacity = '0';
+                                                            popup.style.pointerEvents = 'none';
+                                                        }, 1500);
+                                                    }).catch(() => {
+                                                        alert('Failed to copy email. Please copy manually.');
+                                                    });
+                                                });
+                                            </script>
+
+
                                         </div>
                                     </div>
                                     <div class="flex items-center space-x-3">
@@ -395,8 +456,7 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Liens Rapides</h3>
                     <ul class="space-y-2">
-                        <li><a href="/"
-                                class="text-secondary-300 hover:text-accent transition-smooth">Accueil</a></li>
+                        <li><a href="/" class="text-secondary-300 hover:text-accent transition-smooth">Accueil</a></li>
                         <li><a href="contact.html"
                                 class="text-secondary-300 hover:text-accent transition-smooth">Contact</a></li>
                     </ul>
@@ -493,4 +553,3 @@
 </body>
 
 </html>
-
