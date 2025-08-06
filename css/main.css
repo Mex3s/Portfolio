@@ -2142,3 +2142,15 @@ code, pre {
     line-height: 1;
   }
 }
+
+.moree{
+  display: block;
+  text-align: center;
+   color: #808080;
+   text-decoration: none;
+}
+.moree:hover{
+  text-decoration: underline;
+  text-decoration-color: #808080;
+  cursor: pointer;
+}
